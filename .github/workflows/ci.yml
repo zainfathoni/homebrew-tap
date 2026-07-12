@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check formula syntax
+        run: ruby -c Formula/amux.rb && ruby -c Formula/fizzy-md.rb
+
+  install:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install and test formulas
+        run: |
+          brew install --formula ./Formula/amux.rb
+          brew test amux
+          brew install --formula ./Formula/fizzy-md.rb
+          brew test fizzy-md
