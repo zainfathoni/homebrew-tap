@@ -20,10 +20,11 @@ jobs:
   install:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
       - name: Install and test formulas
         run: |
-          brew install --formula ./Formula/amux.rb
-          brew test amux
-          brew install --formula ./Formula/fizzy-md.rb
-          brew test fizzy-md
+          brew install zainfathoni/tap/amux
+          brew test zainfathoni/tap/amux
+          brew install zainfathoni/tap/fizzy-md
+          brew test zainfathoni/tap/fizzy-md
