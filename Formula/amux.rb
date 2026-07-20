@@ -1,26 +1,26 @@
 class Amux < Formula
   desc "Restore Amp tmux workspaces from a simple TSV config"
   homepage "https://github.com/zainfathoni/amux"
-  version "0.2.15"
+  version "0.2.16"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/zainfathoni/amux/releases/download/v0.2.15/amux-v0.2.15-darwin-arm64.tar.gz"
-      sha256 "1dacc02411a42df60ba1f52383006372b8e3738205cc711490e6a74b64160416"
+      url "https://github.com/zainfathoni/amux/releases/download/v0.2.16/amux-v0.2.16-darwin-arm64.tar.gz"
+      sha256 "84ada760876e4583ba2e0aee76940aa4a359a120afbb81b68d0518367030935f"
     else
-      url "https://github.com/zainfathoni/amux/releases/download/v0.2.15/amux-v0.2.15-darwin-amd64.tar.gz"
-      sha256 "636e9626c06dc86db2a69949dcd3b19b23dd756ba779008e2967505d1dfbb96b"
+      url "https://github.com/zainfathoni/amux/releases/download/v0.2.16/amux-v0.2.16-darwin-amd64.tar.gz"
+      sha256 "dc182e24c3879a4f6a59caebeb9796b9151776a7aa8e022ac58b88124f77b1fc"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/zainfathoni/amux/releases/download/v0.2.15/amux-v0.2.15-linux-arm64.tar.gz"
-      sha256 "764002145af3875a6df3468b27b0086ff09a471a58e033a00ad7234f0dcd95e8"
+      url "https://github.com/zainfathoni/amux/releases/download/v0.2.16/amux-v0.2.16-linux-arm64.tar.gz"
+      sha256 "f04da35da8853cda68d81ef06a41f1a698cc2627ab40de3259205d1fbdb67e1a"
     else
-      url "https://github.com/zainfathoni/amux/releases/download/v0.2.15/amux-v0.2.15-linux-amd64.tar.gz"
-      sha256 "d1cffe1f39970be4285d30947d27b5a5d3933f4240f1fdb98b373c4808828174"
+      url "https://github.com/zainfathoni/amux/releases/download/v0.2.16/amux-v0.2.16-linux-amd64.tar.gz"
+      sha256 "e8bf5aa46eee7522cbc90ff753abf6c95ee048f2f8f5bd76a9f09d95b8b36ab3"
     end
   end
 
